@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="06-Rock-Paper_Scissor.css">
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+
+
+            <button class="glowbutton" onclick=" userMove='Rock'; 
+            comp = Math.random();
+        
+            console.log(comp);
+            if(comp>=0 && comp<1/3 ){
+                compMove='Rock';
+            }
+            else if(comp>=1/3 && comp<2/3 ){
+                compMove='Paper';
+            }
+            else if(comp>=2/3 && comp<1 ){
+                compMove='Scissor';
+            }
+    
+            if (userMove === compMove){
+                alert(`Draw!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+            }
+            else if(userMove === 'Rock' && compMove === 'Scissor'){
+                alert(`Congratulations! You Won!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+            }
+            else if(userMove === 'Rock' && compMove === 'Paper'){
+                alert(`You Lose!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+            }">Rock</button>
+
+
+            <button class="glowbutton" onclick=" userMove='Paper'; 
+            comp = Math.random();
+        
+            console.log(comp);
+            if(comp>=0 && comp<1/3 ){
+                compMove='Rock';
+            }
+            else if(comp>=1/3 && comp<2/3 ){
+                compMove='Paper';
+            }
+            else if(comp>=2/3 && comp<1 ){
+                compMove='Scissor';
+            }
+    
+            if (userMove === compMove){
+                alert(`Draw!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+            }
+            else if(userMove === 'Paper' && compMove === 'Rock'){
+                alert(`Congratulations! You Won!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+            }
+            else if(userMove === 'Paper' && compMove === 'Scissor'){
+                alert(`You Lose!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+            }">Paper</button>
+
+
+            <button class="glowbutton" onclick=" userMove='Scissor'; 
+            comp = Math.random();
+        
+            console.log(comp);
+            if(comp>=0 && comp<1/3 ){
+                compMove='Rock';
+            }
+            else if(comp>=1/3 && comp<2/3 ){
+                compMove='Paper';
+            }
+            else if(comp>=2/3 && comp<1 ){
+                compMove='Scissor';
+            }
+
+            if (userMove === compMove){
+                alert(`Draw!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+            }
+            else if(userMove === 'Scissor' && compMove === 'Paper'){
+                alert(`Congratulations! You Won!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+            }
+            else if(userMove === 'Scissor' && compMove === 'Rock'){
+                alert(`You Lose!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+            }">Scissor</button>
+        </div>
+        
+    
+    </div>
+    
+
+    <script>
+        let compMove='';
+        let userMove='';
+        let comp='';
+        /*
+        let comp = Math.random();
+        
+        console.log(comp);
+        if(comp>=0 && comp<1/3 ){
+            compMove='Rock';
+        }
+        else if(comp>=1/3 && comp<2/3 ){
+            compMove='Paper';
+        }
+        else if(comp>=2/3 && comp<1 ){
+            compMove='Scissor';
+        }
+
+        if (userMove === compMove){
+            alert(`Draw!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+        }
+        else if(userMove === 'Rock' && compMove === 'Scissor'){
+            alert(`Congratulations! You Won!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+        }
+        else if(userMove === 'Rock' && compMove === 'Paper'){
+            alert(`Congratulations! You Lose!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
+        }
+        */
+    </script>
+</body>
+</html>

@@ -15,6 +15,9 @@
             <button class="glowbutton" onclick=" game('paper') ">Paper</button>
             <button class="glowbutton" onclick=" game('scissor') ">Scissor</button>
         </div>
+        <div class="reset">
+            <button class="glowbutton" onclick=" resetScore();">Reset</button>
+        </div>
         
     
     </div>
@@ -24,6 +27,15 @@
         let compMove='';
         // let userMove='';
         let comp='';
+        const ScoreBoard = {
+            wins : 0,
+            ties : 0,
+            losses : 0,
+        }
+        
+
+        //win,ties,losses = ScoreBoard.wins++; ScoreBoard.ties++; ScoreBoard.losses++;
+        //\n Wins: ${ScoreBoard.wins}, Losses: ${ScoreBoard.ties}, Ties: ${ScoreBoard.ties}
 
         function game(move){
             comp = Math.random();
@@ -40,40 +52,61 @@
 
             if(move === 'rock'){
                 if (compMove === 'rock'){
-                    alert(`Draw!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                    ScoreBoard.ties++;
+                    alert(`Draw!!!\nYou chose - ${move}\nComputer chose - ${compMove}\n Wins: ${ScoreBoard.wins}, Losses: ${ScoreBoard.losses}, Ties: ${ScoreBoard.ties}`);
                 }
                 else if (compMove === 'paper'){
-                    alert(`You Lose!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                    ScoreBoard.losses++;
+                    alert(`You Lose!!!\nYou chose - ${move}\nComputer chose - ${compMove}\n Wins: ${ScoreBoard.wins}, Losses: ${ScoreBoard.losses}, Ties: ${ScoreBoard.ties}`);
                 }
                 else if (compMove === 'scissor'){
-                    alert(`Congratulations! You Won!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                    ScoreBoard.wins++;
+                    alert(`Congratulations! You Won!!!\nYou chose - ${move}\nComputer chose - ${compMove}\n Wins: ${ScoreBoard.wins}, Losses: ${ScoreBoard.losses}, Ties: ${ScoreBoard.ties}`);
                 }
             }
             if(move === 'paper'){
                 if (compMove === 'paper'){
-                    alert(`Draw!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                    ScoreBoard.ties++;
+                    alert(`Draw!!!\nYou chose - ${move}\nComputer chose - ${compMove}\n Wins: ${ScoreBoard.wins}, Losses: ${ScoreBoard.losses}, Ties: ${ScoreBoard.ties}`);
                 }
                 else if (compMove === 'scissor'){
-                    alert(`You Lose!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                    ScoreBoard.losses++;
+                    alert(`You Lose!!!\nYou chose - ${move}\nComputer chose - ${compMove}\n Wins: ${ScoreBoard.wins}, Losses: ${ScoreBoard.losses}, Ties: ${ScoreBoard.ties}`);
                 }
                 else if (compMove === 'rock'){
-                    alert(`Congratulations! You Won!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                    ScoreBoard.wins++;
+                    alert(`Congratulations! You Won!!!\nYou chose - ${move}\nComputer chose - ${compMove}\n Wins: ${ScoreBoard.wins}, Losses: ${ScoreBoard.losses}, Ties: ${ScoreBoard.ties}`);
                 }
             }
             if(move === 'scissor'){
                 if (compMove === 'scissor'){
-                    alert(`Draw!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                    ScoreBoard.ties++;
+                    alert(`Draw!!!\nYou chose - ${move}\nComputer chose - ${compMove}\n Wins: ${ScoreBoard.wins}, Losses: ${ScoreBoard.losses}, Ties: ${ScoreBoard.ties}`);
+                    
                 }
                 else if (compMove === 'rock'){
-                    alert(`You Lose!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                    ScoreBoard.losses++;
+                    alert(`You Lose!!!\nYou chose - ${move}\nComputer chose - ${compMove}\n Wins: ${ScoreBoard.wins}, Losses: ${ScoreBoard.losses}, Ties: ${ScoreBoard.ties}`);
+                    
                 }
                 else if (compMove === 'paper'){
-                    alert(`Congratulations! You Won!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                    ScoreBoard.wins++;
+                    alert(`Congratulations! You Won!!!\nYou chose - ${move}\nComputer chose - ${compMove}\n Wins: ${ScoreBoard.wins}, Losses: ${ScoreBoard.losses}, Ties: ${ScoreBoard.ties}`);
+                    
                 }
             }
             
 
         }
+
+        function resetScore(){
+            ScoreBoard.wins = 0;
+            ScoreBoard.ties = 0;
+            ScoreBoard.losses = 0;
+        }
+        
+
+        
 
         /*
         let comp = Math.random();

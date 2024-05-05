@@ -11,79 +11,9 @@
         <div class="buttons">
 
 
-            <button class="glowbutton" onclick=" userMove='Rock'; 
-            comp = Math.random();
-        
-            console.log(comp);
-            if(comp>=0 && comp<1/3 ){
-                compMove='Rock';
-            }
-            else if(comp>=1/3 && comp<2/3 ){
-                compMove='Paper';
-            }
-            else if(comp>=2/3 && comp<1 ){
-                compMove='Scissor';
-            }
-    
-            if (userMove === compMove){
-                alert(`Draw!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
-            }
-            else if(userMove === 'Rock' && compMove === 'Scissor'){
-                alert(`Congratulations! You Won!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
-            }
-            else if(userMove === 'Rock' && compMove === 'Paper'){
-                alert(`You Lose!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
-            }">Rock</button>
-
-
-            <button class="glowbutton" onclick=" userMove='Paper'; 
-            comp = Math.random();
-        
-            console.log(comp);
-            if(comp>=0 && comp<1/3 ){
-                compMove='Rock';
-            }
-            else if(comp>=1/3 && comp<2/3 ){
-                compMove='Paper';
-            }
-            else if(comp>=2/3 && comp<1 ){
-                compMove='Scissor';
-            }
-    
-            if (userMove === compMove){
-                alert(`Draw!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
-            }
-            else if(userMove === 'Paper' && compMove === 'Rock'){
-                alert(`Congratulations! You Won!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
-            }
-            else if(userMove === 'Paper' && compMove === 'Scissor'){
-                alert(`You Lose!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
-            }">Paper</button>
-
-
-            <button class="glowbutton" onclick=" userMove='Scissor'; 
-            comp = Math.random();
-        
-            console.log(comp);
-            if(comp>=0 && comp<1/3 ){
-                compMove='Rock';
-            }
-            else if(comp>=1/3 && comp<2/3 ){
-                compMove='Paper';
-            }
-            else if(comp>=2/3 && comp<1 ){
-                compMove='Scissor';
-            }
-
-            if (userMove === compMove){
-                alert(`Draw!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
-            }
-            else if(userMove === 'Scissor' && compMove === 'Paper'){
-                alert(`Congratulations! You Won!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
-            }
-            else if(userMove === 'Scissor' && compMove === 'Rock'){
-                alert(`You Lose!!!\nYou chose - ${userMove}\nComputer chose - ${compMove}`);
-            }">Scissor</button>
+            <button class="glowbutton" onclick=" game('rock') ">Rock</button>
+            <button class="glowbutton" onclick=" game('paper') ">Paper</button>
+            <button class="glowbutton" onclick=" game('scissor') ">Scissor</button>
         </div>
         
     
@@ -92,8 +22,59 @@
 
     <script>
         let compMove='';
-        let userMove='';
+        // let userMove='';
         let comp='';
+
+        function game(move){
+            comp = Math.random();
+
+            if (comp>=0 && comp<1/3){
+                compMove='rock';
+            }
+            else if (comp>=1/3 && comp<2/3){
+                compMove='paper';
+            }
+            else if (comp>=2/3 && comp<1){
+                compMove='scissor';
+            }
+
+            if(move === 'rock'){
+                if (compMove === 'rock'){
+                    alert(`Draw!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                }
+                else if (compMove === 'paper'){
+                    alert(`You Lose!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                }
+                else if (compMove === 'scissor'){
+                    alert(`Congratulations! You Won!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                }
+            }
+            if(move === 'paper'){
+                if (compMove === 'paper'){
+                    alert(`Draw!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                }
+                else if (compMove === 'scissor'){
+                    alert(`You Lose!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                }
+                else if (compMove === 'rock'){
+                    alert(`Congratulations! You Won!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                }
+            }
+            if(move === 'scissor'){
+                if (compMove === 'scissor'){
+                    alert(`Draw!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                }
+                else if (compMove === 'rock'){
+                    alert(`You Lose!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                }
+                else if (compMove === 'paper'){
+                    alert(`Congratulations! You Won!!!\nYou chose - ${move}\nComputer chose - ${compMove}`);
+                }
+            }
+            
+
+        }
+
         /*
         let comp = Math.random();
         

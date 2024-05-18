@@ -110,6 +110,10 @@
 
         function resetScore(){
             localStorage.removeItem('ScoreBoard');
+            //Update - reset score was only working after refreshing
+            ScoreBoard.wins = 0;
+            ScoreBoard.losses = 0;
+            ScoreBoard.ties = 0;
         }
         
 
